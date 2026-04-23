@@ -1,0 +1,56 @@
+name: Pipeline CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Pruebas Automatizadas
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Instalar dependencias
+        run: cd backend && npm install
+
+      - name: Correr pruebas
+        run: cd backend && npm test
+
+  build:
+    name: Construir imagen Docker
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Construir imagen
+        run: docker build ./backend
+
+  lint:
+    name: Analisis de codigo
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Instalar dependencias
+        run: cd backend && npm install
+
+      - name: Correr ESLint
+        run: cd backend && npx eslint . --ext .js --ignore-pattern node_modules/

@@ -1,0 +1,17 @@
+2026-04-22T23:36:03.314Z - Servidor corriendo en puerto 3000
+2026-04-22T23:36:15.853Z - Health check realizado
+2026-04-22T23:38:21.046Z - Servidor corriendo en puerto 3000
+2026-04-22T23:38:28.222Z - Health check realizado
+2026-04-22T23:38:30.084Z - Health check realizado
+2026-04-22T23:38:30.472Z - Health check realizado
+2026-04-22T23:38:31.046Z - Health check realizado
+2026-04-22T23:39:07.233Z - GET /tasks - 0 tareas
+2026-04-22T23:40:18.232Z - Servidor corriendo en puerto 3000
+2026-04-22T23:55:23.263Z - Servidor corriendo en puerto 3000
+2026-04-22T23:55:23.302Z - Health check realizado
+2026-04-22T23:55:23.323Z - GET /tasks - 0 tareas
+2026-04-22T23:55:23.357Z - POST /tasks - Tarea creada: Tarea de prueba
+2026-04-22T23:55:23.385Z - POST /tasks - Tarea creada: Tarea para completar
+2026-04-22T23:55:23.402Z - PUT /tasks/2 - Tarea actualizada
+2026-04-22T23:55:23.422Z - POST /tasks - Tarea creada: Tarea para eliminar
+2026-04-22T23:55:23.443Z - DELETE /tasks/3 - Tarea eliminada
